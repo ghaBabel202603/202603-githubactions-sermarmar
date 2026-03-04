@@ -9,7 +9,7 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: Checkout Code
-              uses: actions/checkout@v6.0.2
+              uses: actions/checkout@v4
             - name: Node Setup
               uses: actions/setup-node@v4
               with:
@@ -17,4 +17,4 @@ jobs:
             - name: Install Dependencies
               run: cd my-app && npm ci
             - name: Run Unit Tests
-              run: cd my-app && npm run test:unit
+              run: cd my-app && npm run test
