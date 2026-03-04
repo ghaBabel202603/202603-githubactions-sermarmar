@@ -11,24 +11,18 @@ jobs:
         - name: Mostrar SO
           run: |
             echo "Este trabajo se ejecuta en un runner de Ubuntu"
-            echo "El nombre del runner es: $RUNNER_NAME"
             echo "El SO del runner es: $RUNNER_OS"
-            echo "El arquitectura del runner es: $RUNNER_ARCH"
   macos-echo:
     runs-on: macos-latest
     steps:
         - name: Mostrar SO
           run: |
             echo "Este trabajo se ejecuta en un runner de macOS"
-            echo "El nombre del runner es: $RUNNER_NAME"
             echo "El SO del runner es: $RUNNER_OS"
-            echo "El arquitectura del runner es: $RUNNER_ARCH"
   windows-echo:
     runs-on: windows-latest
     steps:
         - name: Mostrar SO
           run: |
             echo "Este trabajo se ejecuta en un runner de Windows"
-            echo "El nombre del runner es: $RUNNER_NAME"
-            echo "El SO del runner es: $RUNNER_OS"
-            echo "El arquitectura del runner es: $RUNNER_ARCH"
+            echo "El SO del runner es: ${{ runner.os }}"
